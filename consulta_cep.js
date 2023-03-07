@@ -9,7 +9,35 @@ function preecherFormulario(endereco){
     document.getElementById("cidade").value = endereco.localidade;
 
     document.getElementById("estado").value = endereco.uf;
+    
+    document.getElementById("ibge").value = endereco.ibge;
 
+    document.getElementById("ddd").value = endereco.ddd;
+
+    document.getElementById("siafi").value = endereco.siafi;
+
+}
+
+//exibir informações após clicar no botão de salvar
+
+function exibirInfo(){
+       
+
+    const endereco = document.getElementById('endereco').value;
+    const bairro = document.getElementById('bairro').value;
+    const cidade = document.getElementById('cidade').value;
+    const estado = document.getElementById('estado').value;
+    const ibge = document.getElementById('ibge').value;
+    const ddd = document.getElementById('ddd').value;
+    const siafi = document.getElementById('siafi').value;
+
+    
+
+    const mensagem = `Endereço: ${endereco}\nBairro: ${bairro}\nCidade: ${cidade}\nEstado: ${estado}\nIbge: ${ibge}\nDDD: ${ddd}\nSiafi: ${siafi}`;
+    
+    alert(mensagem)
+    
+    
 }
 
 
@@ -46,9 +74,29 @@ async function pesquisarCEP(){
         
     } else {
         document.getElementById("endereco").value = "CEP Incorreto!"
-    }
-    
-    
+        }         
 }
+
+//limpar campos
+
+function limparCampos (){
+    document.getElementById("cep").value = ''
+    document.getElementById("endereco").value = ''
+    document.getElementById("bairro").value = ''
+    document.getElementById("cidade").value = ''
+    document.getElementById("estado").value = ''
+    document.getElementById("ibge").value = ''
+    document.getElementById("ddd").value = ''
+    document.getElementById("siafi").value = ''
+}
+
+// ouvinte de um evento para o botão Limpar
+const limpar = document.getElementById('limpar');
+limpar.addEventListener('click',limparCampos);
+
+// ouvinte de um evento para o botão limpar
+const salvar = document.getElementById('salvar');
+salvar.addEventListener('click',exibirInfo);
+
 
 document.getElementById("cep").addEventListener("focusout",pesquisarCEP);
