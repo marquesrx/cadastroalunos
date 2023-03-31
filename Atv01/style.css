@@ -1,0 +1,67 @@
+.botao{
+    width: 150px;
+    height: 30px;
+    background-color: #338ac4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.input{
+    margin-right: 10px;
+    height: 24px;
+    width: 300px;
+    border-radius: 5px;
+    border-width: 1px;
+}
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+.pesquisa {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-container{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    margin-top: 40px;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    padding: 20px;
+    width: 400px;
+    min-height: 120px;
+    justify-content: left;
+    background-color: #ffffff;
+}
+
+.card img {
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+}
+
+.card-content {
+    padding: 16px;
+}
+
+.card-content h2 {
+    margin-top: 0;
+}
+
+.card-content p {
+    margin-bottom: 0;
+}
